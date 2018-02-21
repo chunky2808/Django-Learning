@@ -1,5 +1,14 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from .models import Forum
 
 # Create your views here.
-def t1(request):
-    return render(request, 'blog/post_list.html', {})
+def home(request):
+	forums = Forum.objects.all()
+	forum_name = list()
+
+	for forum in forums:
+		forum_name.append(forum.name)
+
+	response_html = '<br>'.join(forum_name)	
+	return HttpResponse(response_html)
