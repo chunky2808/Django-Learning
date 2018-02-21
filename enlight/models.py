@@ -14,6 +14,7 @@ class Topic(models.Model):
 	updated = models.DateTimeField(auto_now_add=True)
 	forum = models.ForeignKey(Forum,related_name = 'topics')
 	started_by = models.ForeignKey(User,related_name = 'topics')
+	last_updated = models.DateTimeField(auto_now_add=True)
 
 
 

@@ -1,0 +1,16 @@
+{% load static %}<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ forums.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <ol class="breadcrumb my-4">
+        <li class="breadcrumb-item"><a href = "{% url 'home' %}">Forums</li></a>
+        <li class="breadcrumb-item active">{{ forums.name }}</li>
+      </ol>
+    </div>
+  </body>
+</html>
