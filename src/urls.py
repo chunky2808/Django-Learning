@@ -21,6 +21,7 @@ from enlight import views
 urlpatterns = [
 	url(r'^$',views.home,name= 'home'),
 	url(r'^forums/(?P<pk>\d+)/$', views.forum_topics, name='forum_topics'),
+	url(r'^forums/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
 	url(r'^admin/', admin.site.urls),
 
 ]
