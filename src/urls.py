@@ -23,6 +23,7 @@ from enlight import views
 urlpatterns = [
 	url(r'^$',views.home,name= 'home'),
     url(r'^signup/$',userinfo_views.signup,name= 'signup'),
+    url(r'^login/$', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
 	url(r'^forums/(?P<pk>\d+)/$', views.forum_topics, name='forum_topics'),
 	url(r'^forums/(?P<pk>\d+)/new/$', views.new_topic, name='new_topic'),
